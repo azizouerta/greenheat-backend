@@ -45,7 +45,7 @@ services:
     build: ./greenheat-backend
     ports:
       - "5000:5000"
-# Then run:
+### Then run:
 docker-compose up --build
 
 
