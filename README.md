@@ -23,3 +23,17 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ### 3. Run the app locally
+flask run
+
+## Docker Instructions
+
+### 1. Build the Docker image
+docker build -t greenheat-backend .
+### 2. Run the Docker container
+docker run -d -p 5000:5000 greenheat-backend
+### Using Docker Compose 
+docker-compose up --build
+
+
+
+
