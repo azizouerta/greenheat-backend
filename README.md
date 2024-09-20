@@ -32,6 +32,20 @@ docker build -t greenheat-backend .
 ### 2. Run the Docker container
 docker run -d -p 5000:5000 greenheat-backend
 ### Using Docker Compose 
+If you want to start both the frontend and backend services using Docker Compose, use the following docker-compose.yml file in the root directory:
+version: "3.8"
+
+services:
+  frontend:
+    build: ./greenheat-frontend
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./greenheat-backend
+    ports:
+      - "5000:5000"
+Then run:
 docker-compose up --build
 
 
